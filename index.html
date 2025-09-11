@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF圧縮ツール</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>GIF圧縮ツール</h1>
+            <p class="subtitle">容量を8MB以下に最適化します。</p>
+        </header>
+
+        <div class="tool-section">
+            <div class="input-area" id="input-area">
+                <label for="gif-upload" class="file-label">
+                    <span class="file-label-text">GIFファイルを選択</span>
+                    <input type="file" id="gif-upload" accept=".gif" hidden>
+                </label>
+                <div id="file-info" class="file-info"></div>
+            </div>
+            
+            <button id="compress-btn" class="compress-btn" disabled>圧縮を開始</button>
+        </div>
+
+        <div id="status" class="status-message"></div>
+
+        <div id="result-area" class="result-area" style="display:none;">
+            <div class="result-summary">
+                <div class="summary-item">
+                    <p>元のサイズ</p>
+                    <span id="original-size" class="size-text"></span>
+                </div>
+                <div class="summary-item">
+                    <p>圧縮後のサイズ</p>
+                    <span id="compressed-size" class="size-text"></span>
+                </div>
+            </div>
+
+            <div class="gif-comparison">
+                <div class="gif-preview">
+                    <h3>元のGIF</h3>
+                    <img id="original-gif" alt="元のGIF" class="gif-image">
+                </div>
+                <div class="gif-preview">
+                    <h3>圧縮後のGIF</h3>
+                    <img id="compressed-gif" alt="圧縮後のGIF" class="gif-image">
+                </div>
+            </div>
+            <a id="download-link" class="download-btn" download="compressed.gif">ダウンロード</a>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jsgif@1.0.2/libgif.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
