@@ -43,7 +43,7 @@ compressBtn.addEventListener('click', async () => {
         const frameCount = gifReader.numFrames();
 
         const MAX_BYTES = 8 * 1024 * 1024;
-        const TARGET_BYTES = 8 * 1024 * 1024;
+        const TARGET_BYTES = 7.2 * 1024 * 1024;
         
         let scale = 1.0;
         let quality = 10;
@@ -144,4 +144,5 @@ function showResult(blob) {
     const downloadLink = document.getElementById('download-link');
     downloadLink.href = compressedUrl;
     resultArea.style.display = 'block';
+
 }
