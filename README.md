@@ -21,17 +21,16 @@ Discord（非Nitroユーザー）のファイルアップロード制限であ�
 └── README.md    # このファイル
 ```
 
-使用ライブラリ
+## 使用ライブラリ
 gif.js - GIFエンコーダー
 omggif - GIFデコーダー
-⚠️ 実行時の注意（重要）
+## 実行時の注意（重要）
 このツールは Web Worker を使用しているため、セキュリティ上の理由から index.html をブラウザで直接開くだけでは動作しません。
 以下のいずれかの方法で「ローカルサーバー」を立ち上げて実行してください。
 VSCode Live Server: Go Live ボタンをクリックして起動。
 Python: フォルダ内で python -m http.server 8000 を実行。
 GitHub Pages: このリポジトリを GitHub Pages にデプロイして実行。
-⚙️ 圧縮ロジックについて
+## 圧縮ロジックについて
 単に画質を落とすだけでなく、以下の計算式を用いてリサイズを行います：
 目標サイズを 7.2MB に設定（書き出し後の誤差を考慮したバッファ）。
 面積比 = 目標サイズ / 元のサイズ からスケール（倍率）を算出し、解像度を調整します。
-Created for Discord users who need quick 8MB GIF optimization.
