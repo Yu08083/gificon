@@ -1,3 +1,6 @@
+## 使用リンク
+https://yu08083.github.io/gificon/
+
 # GIF Compression Tool (for Discord Optimization)
 
 Discordのアイコンやバナーに最適な、**8MB以下**に自動調整するブラウザベースのGIF圧縮ツールです。
